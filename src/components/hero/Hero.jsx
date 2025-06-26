@@ -45,6 +45,7 @@ const rightvariants={
   }
 }
 
+
 const Hero = () => {
 const { scrollYProgress } = useScroll();
 const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2])
@@ -65,15 +66,18 @@ useEffect(() => {
 
     <div className='herocontainer'>
       <div className="content">
-        {/* <AnimatePresence> */}
+        
+        <motion.div className='right' variants={rightvariants} initial="initial" animate="animate">
+          {/* <motion.img src={version} className="version" style={{ scale} } alt="" /> */}
+          <div className='name'>
+            <div className='upper'>Version Beta</div>
+            <div className='lower'>8.0</div>
+          </div>
+        </motion.div>
         <motion.div className="left" variants={leftcontainervariants} initial="initial" animate="animate" exit={{opacity:0}}>
           <motion.div className='title' variants={childvariants}>Crack the Code. Claim the Glory.</motion.div>
           <motion.div className='subtitle' variants={childvariants}>Welcome to Version Beta 8.0</motion.div>
           <motion.p className='desc' variants={childvariants}>Enter the arena where bugs fall, and coders rise! Where every logic error fuels your next breakthrough!</motion.p>
-        </motion.div>
-        {/* </AnimatePresence> */}
-        <motion.div className='right' variants={rightvariants} initial="initial" animate="animate">
-          <motion.img src={version} className="version" style={{ scale} } alt="" />
         </motion.div>
       </div>
         <motion.div className="register">Register Now for Version Beta 8.0</motion.div>
