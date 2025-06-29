@@ -5,17 +5,17 @@ import one from "../../assets/one.png"
 import second from "../../assets/second.png"
 import third from "../../assets/third.png"
 const Prizes = () => {
-  const prizeRef = useRef(null);
+  const prizeRef = useRef(null)
 
   useEffect(() => {
     // ensure confetti is available
-    if (typeof confetti !== 'function') return;
+    if (typeof confetti !== 'function') return
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const rainDuration = 3000;               // milliseconds
-          const rainEnd = Date.now() + rainDuration;
+          const rainDuration = 3000               // milliseconds
+          const rainEnd = Date.now() + rainDuration
 
           (function frame() {
             confetti({
@@ -25,21 +25,21 @@ const Prizes = () => {
               ticks: 200,
               origin: { x: Math.random(), y: Math.random() - 0.2 },
               colors: ['#bb0000', '#ffffff', '#00bb00', '#0000bb'],
-            });
+            })
             if (Date.now() < rainEnd) {
-              requestAnimationFrame(frame);
+              requestAnimationFrame(frame)
             }
-          })();
+          })()
         }
-      });
-    }, { threshold: 0.5 });
+      })
+    }, { threshold: 0.5 })
 
-    if (prizeRef.current) observer.observe(prizeRef.current);
+    if (prizeRef.current) observer.observe(prizeRef.current)
 
     return () => {
-      if (prizeRef.current) observer.unobserve(prizeRef.current);
-    };
-  }, []);
+      if (prizeRef.current) observer.unobserve(prizeRef.current)
+    }
+  }, [])
 
   return (
     <div id='prizecontainer' ref={prizeRef}>

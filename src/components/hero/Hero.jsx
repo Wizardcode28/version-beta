@@ -47,43 +47,43 @@ const leftvariants={
 
 
 const Hero = () => {
-const lightRef = useRef(null);
-  const containerRef = useRef(null);
+const lightRef = useRef(null)
+  const containerRef = useRef(null)
 
   useEffect(() => {
-    const container = containerRef.current;
-    const light = lightRef.current;
+    const container = containerRef.current
+    const light = lightRef.current
 
     const handleMouseMove = (e) => {
       if (container && light) {
-        const rect = container.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+        const rect = container.getBoundingClientRect()
+        const x = e.clientX - rect.left
+        const y = e.clientY - rect.top
 
-        light.style.left = `${x}px`;
-        light.style.top = `${y}px`;
-        light.style.opacity = 1;
+        light.style.left = `${x}px`
+        light.style.top = `${y}px`
+        light.style.opacity = 1
       }
-    };
+    }
 
     const handleMouseLeave = () => {
       if (light) {
-        light.style.opacity = 0;
+        light.style.opacity = 0
       }
-    };
+    }
 
     if (container) {
-      container.addEventListener("mousemove", handleMouseMove);
-      container.addEventListener("mouseleave", handleMouseLeave);
+      container.addEventListener("mousemove", handleMouseMove)
+      container.addEventListener("mouseleave", handleMouseLeave)
     }
 
     return () => {
       if (container) {
-        container.removeEventListener("mousemove", handleMouseMove);
-        container.removeEventListener("mouseleave", handleMouseLeave);
+        container.removeEventListener("mousemove", handleMouseMove)
+        container.removeEventListener("mouseleave", handleMouseLeave)
       }
-    };
-  }, []);
+    }
+  }, [])
 
 
   return (

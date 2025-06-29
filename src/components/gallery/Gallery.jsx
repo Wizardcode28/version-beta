@@ -1,27 +1,27 @@
 import React from 'react'
 import "./Gallery.css"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 const Gallery = () => {
 useEffect(() => {
-    AOS.init({ once: true });
+    AOS.init({ once: true })
 
     const handleScroll = () => {
-      const items = document.querySelectorAll('.parallax');
-      const scrollY = window.scrollY;
+      const items = document.querySelectorAll('.parallax')
+      const scrollY = window.scrollY
 
       items.forEach((item) => {
-       const rect = item.getBoundingClientRect();
-       const offset = rect.top - window.innerHeight / 2;
-       const speed = 0.2;
-       item.style.transform = `translateY(${offset * speed}px)`;
-      });
-    };
+       const rect = item.getBoundingClientRect()
+       const offset = rect.top - window.innerHeight / 2
+       const speed = 0.2
+       item.style.transform = `translateY(${offset * speed}px)`
+      })
+    }
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <div className='gallerycontainer'>
