@@ -1,0 +1,70 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #020f1f;
+    /* overflow-x: hidden; */
+}
+*{
+    /* outline: 1px solid lime; */
+}
+.schedulecontainer{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,#020f1f 0%,#020f1f 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;  /* Hide scrollbar for IE/Edge */
+    scrollbar-width: none;     /* Hide scrollbar for Firefox */
+}
+.schedule-container::-webkit-scrollbar {
+  display: none;  /* Hide scrollbar for Chrome/Safari */
+}
+.scheduletitle{
+    color: aquamarine;
+    font-size:30px;
+    font-weight: bold;
+    font-family: "StateWide",sans-serif;
+    margin-bottom: 15vh;
+}
+.allcontainer{
+    width: 150vw;
+    display: flex;
+    
+    gap: 3%;
+    padding: 20px;
+}
+.timecontainer{
+    width: 35%;
+    border: 1px solid aqua;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 1%;
+    box-shadow: 0px 0px 10px 3px aqua;
+}
+.timecontainer:hover{
+    /* transform: scale(1.2); */
+}
+.timetitle{
+    color: #df6666;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "League Spartan",sans-serif;
+}
+.card{
+    color:rgb(178, 233, 185);
+    font-size: 20px;
+    width: 100%;
+    height: 70%;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+    
+}

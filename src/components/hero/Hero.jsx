@@ -1,10 +1,10 @@
 import React from 'react'
 import "./Hero.css"
+import { useState,useRef,useEffect } from 'react'
 import { AnimatePresence, motion } from "framer-motion"
 import version from "../../assets/version.png"
 import { useScroll, useTransform } from "framer-motion"
-import { useState,useEffect,useRef } from 'react'
-const leftcontainervariants={
+const rightcontainervariants={
   initial:{
     y:-30,
     opacity:0
@@ -31,9 +31,9 @@ const childvariants={
     }
   }
 }
-const rightvariants={
+const leftvariants={
   initial:{
-    x:200,
+    x:-200,
     opacity:0
   },
   animate:{
@@ -47,37 +47,63 @@ const rightvariants={
 
 
 const Hero = () => {
-const { scrollYProgress } = useScroll();
-const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2])
+const lightRef = useRef(null);
+  const containerRef = useRef(null);
 
-const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-useEffect(() => {
-  const handleMouseMove = (e) => {
-    setMousePos({
-      x: (e.clientX / window.innerWidth - 0.5) * 50,
-      y: (e.clientY / window.innerHeight - 0.5) * 50,
-    });
-  };
-  window.addEventListener("mousemove", handleMouseMove);
-  return () => window.removeEventListener("mousemove", handleMouseMove);
-}, []);
+  useEffect(() => {
+    const container = containerRef.current;
+    const light = lightRef.current;
+
+    const handleMouseMove = (e) => {
+      if (container && light) {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        light.style.left = `${x}px`;
+        light.style.top = `${y}px`;
+        light.style.opacity = 1;
+      }
+    };
+
+    const handleMouseLeave = () => {
+      if (light) {
+        light.style.opacity = 0;
+      }
+    };
+
+    if (container) {
+      container.addEventListener("mousemove", handleMouseMove);
+      container.addEventListener("mouseleave", handleMouseLeave);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener("mousemove", handleMouseMove);
+        container.removeEventListener("mouseleave", handleMouseLeave);
+      }
+    };
+  }, []);
+
 
   return (
 
-    <div className='herocontainer'>
+    <div className='herocontainer' ref={containerRef}>
+      <div ref={lightRef} className="cursor-light"
+      />
+
       <div className="content">
-        
-        <motion.div className='right' variants={rightvariants} initial="initial" animate="animate">
+        <motion.div className='right' variants={leftvariants} initial="initial" animate="animate">
           {/* <motion.img src={version} className="version" style={{ scale} } alt="" /> */}
           <div className='name'>
             <div className='upper'>Version Beta</div>
             <div className='lower'>8.0</div>
           </div>
         </motion.div>
-        <motion.div className="left" variants={leftcontainervariants} initial="initial" animate="animate" exit={{opacity:0}}>
+        <motion.div className="left" variants={rightcontainervariants} initial="initial" animate="animate" exit={{opacity:0}}>
           <motion.div className='title' variants={childvariants}>Crack the Code. Claim the Glory.</motion.div>
           <motion.div className='subtitle' variants={childvariants}>Welcome to Version Beta 8.0</motion.div>
-          <motion.p className='desc' variants={childvariants}>Enter the arena where bugs fall, and coders rise! Where every logic error fuels your next breakthrough!</motion.p>
+          <motion.p className='desc' variants={childvariants}>Enter the arena where bugs fall, and coders rise! Where every error fuels your next breakthrough!</motion.p>
         </motion.div>
       </div>
         <motion.div className="register">Register Now for Version Beta 8.0</motion.div>

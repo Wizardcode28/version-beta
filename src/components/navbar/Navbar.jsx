@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <div className='navcontainer'>
       <div>
-        <motion.img src={logo} variants={imgvariants} initial="initial" animate="animate" alt="" />
+        <motion.img src={logo} variants={imgvariants} initial="initial" animate="animate" className='istelogo' alt="" />
       </div>
       <motion.div className='nav'>
             <motion.ul variants={ulvariants} initial="initial" animate="animate" >

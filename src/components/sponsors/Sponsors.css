@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid lime; */
+}
+.sponsorscontainer{
+    width: 100%;
+    background-color: black;
+    min-height: 100vh;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sponsorstitle{
+    color: aquamarine;
+    font-size:30px;
+    font-weight: bold;
+    font-family: "StateWide",sans-serif;
+    margin-bottom: 15vh;
+}
+.sponsors-marquee{
+    width: 200%;
+    overflow: hidden;
+    /* padding: 20px 0px; */
+}
+.sponsors{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20vh;
+    /* overflow: hidden; */
+    white-space: nowrap;
+    align-items: center;
+    animation:scroll 15s linear infinite;
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-25%);
+    }
+}
+.img{
+    width: 200px;
+}

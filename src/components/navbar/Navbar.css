@@ -7,6 +7,9 @@
     height: 8vh;
     background: linear-gradient(to right,#181516 0%,#6196A2 50%,#1A1816 100%);
 }
+.istelogo{
+    width: 110px;
+}
 .nav ul{
     display: flex;
     gap: 41px;
