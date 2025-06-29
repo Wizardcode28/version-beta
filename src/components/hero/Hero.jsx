@@ -89,8 +89,7 @@ const lightRef = useRef(null)
   return (
 
     <div className='herocontainer' ref={containerRef}>
-      <div ref={lightRef} className="cursor-light"
-      />
+      <div ref={lightRef} className="cursor-light"/>
 
       <div className="content">
         <motion.div className='right' variants={leftvariants} initial="initial" animate="animate">
