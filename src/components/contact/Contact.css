@@ -6,10 +6,10 @@
 }
 .contactcontainer{
     width: 100%;
-    min-height: 100vh;
     padding: 80px 20px;
     text-align: center;
     overflow: hidden;
+    background: linear-gradient(to bottom, #370812,#892852);
 }
 .contacttitle{
     color: aquamarine;
@@ -17,4 +17,5 @@
     font-weight: bold;
     font-family: "StateWide",sans-serif;
     margin-bottom: 15vh;
+    text-shadow: rgb(230, 230, 230) 0px 0px 5px;
 }

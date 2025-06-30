@@ -19,6 +19,7 @@
     font-weight: bold;
     font-family: "StateWide",sans-serif;
     margin-bottom: 15vh;
+    text-shadow: rgb(230, 230, 230) 0px 0px 5px;
 }
 .gallery{
     display: flex;

@@ -15,7 +15,7 @@ const Prizes = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const rainDuration = 3000               // milliseconds
-          const rainEnd = Date.now() + rainDuration
+          const rainEnd = Date.now() + rainDuration;
 
           (function frame() {
             confetti({

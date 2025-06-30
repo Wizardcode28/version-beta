@@ -106,7 +106,7 @@ const lightRef = useRef(null)
         </motion.div>
       </div>
         <motion.div className="register">Register Now for Version Beta 8.0</motion.div>
-        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0,1]}} transition={{duration:2}} className='btn'>Apply with Devfolio</motion.button>
+        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0,1]}} transition={{duration:1}} className='btn'>Apply with Devfolio</motion.button>
     </div>
   )
 }
