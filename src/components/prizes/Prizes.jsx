@@ -14,7 +14,7 @@ const Prizes = () => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const rainDuration = 3000               // milliseconds
+          const rainDuration = 3000 // milliseconds
           const rainEnd = Date.now() + rainDuration;
 
           (function frame() {
@@ -61,5 +61,4 @@ const Prizes = () => {
     </div>
   )
 }
-
 export default Prizes
