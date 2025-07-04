@@ -2,7 +2,7 @@
     /* outline: 1px solid lime; */
 }
 .herocontainer{
-    background-image: url("../../assets/hllo.png");
+    background-image: url("../../assets/hllo3.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -40,6 +40,9 @@
   100% {
     background-size: 100%;
   }
+}
+.upper{
+    color: white;
 }
 .content{
     margin-top: 7%;

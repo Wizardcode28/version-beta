@@ -91,6 +91,20 @@ const lightRef = useRef(null)
       <div ref={lightRef} className="cursor-light"/>
 
       <div className="content">
+        <div className="upper">
+          <div className="countdown">
+            <div>20</div>
+            <div>13</div>
+            <div>45</div>
+            <div>55</div>
+          </div>
+          <div className="label">
+            <div>Days</div>
+            <div>Hours</div>
+            <div>Minutes</div>
+            <div>Seconds</div>
+          </div>
+        </div>
         <motion.div className='left' variants={leftvariants} initial="initial" animate="animate">
           {/* <motion.img src={version} className="version" style={{ scale} } alt="" /> */}
           <div className='name'>
@@ -104,7 +118,7 @@ const lightRef = useRef(null)
           <motion.p className='desc' variants={childvariants}>Enter the arena where bugs fall, and coders rise! Where every error fuels your next breakthrough!</motion.p>
         </motion.div>
       </div>
-        <motion.div className="register">Register Now for Version Beta 8.0</motion.div>
+        {/* <motion.div className="register">Register Now for Version Beta 8.0</motion.div> */}
         <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0,1]}} transition={{duration:1}} className='btn'>Apply with Devfolio</motion.button>
     </div>
   )

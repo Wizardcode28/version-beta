@@ -24,7 +24,7 @@ const Prizes = () => {
               spread: 360,
               ticks: 200,
               origin: { x: Math.random(), y: Math.random() - 0.2 },
-              colors: ['#bb0000', '#ffffff', '#00bb00', '#0000bb'],
+              colors: ['#bb0000', '#ffffff'],
             })
             if (Date.now() < rainEnd) {
               requestAnimationFrame(frame)

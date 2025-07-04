@@ -1,7 +1,7 @@
 .aboutcontainer{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right,#020f1f 0%,#020f1f 100%);
+    /* background: linear-gradient(to right,#020f1f 0%,#020f1f 100%); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +9,18 @@
     gap: 5vh;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+
+    background: linear-gradient(270deg, #020f1f, #052733, #020f1f);
+    background-size: 600% 600%;
+    animation: gradientMove 5s ease infinite;
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .abouttitle{
     color: aquamarine;
     font-size:30px;

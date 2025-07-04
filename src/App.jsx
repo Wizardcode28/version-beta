@@ -7,6 +7,7 @@ import Hero from "./components/hero/Hero"
 import About from "./components/about/About"
 import Schedule from "./components/schedule/Schedule"
 import Prizes from "./components/prizes/Prizes"
+import Gallery2 from "./components/gallery2/Gallery2"
 import Gallery from "./components/gallery/Gallery"
 import Sponsors from "./components/sponsors/Sponsors"
 import Faqs from "./components/faqs/Faqs"
@@ -28,7 +29,8 @@ function App() {
       <About/>
       <Schedule/>
       <Prizes/>
-      <Gallery/>
+      {/* <Gallery/> */}
+      <Gallery2/>
       <Sponsors/>
       <Faqs/>
       <Contact/>
