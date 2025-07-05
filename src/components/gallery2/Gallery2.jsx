@@ -1,8 +1,11 @@
 import React from 'react'
 import "./Gallery2.css"
+import ParticlesBackground from "../particles/ParticlesBackground.jsx"
+import timeline from "../../assets/timeline.png"
 const Gallery2 = () => {
   return (
     <div className="gallery-grid">
+      {/* <ParticlesBackground/> */}
       <img src="/Images/img1.webp" alt="" className="img img1" />
       <img src="/Images/img2.webp" alt="" className="img img2" />
       <img src="/Images/img4.webp" alt="" className="img img3" />

@@ -47,14 +47,17 @@ const Prizes = () => {
       <div className="prizescontent">
          <div className="prizetitle">Prizes</div>
          <div className="prizes">
-          <div className="second">
+          <div className="second prize">
               <img src={second} data-aos="fade-up" data-aos-delay="200" alt="" />
+              <div className='pricetag'>₹ 10000</div>
           </div>
-          <div className="one">
+          <div className="one prize">
               <img src={one} data-aos="fade-up" data-aos-delay="400" alt="" />
+              <div className='pricetag'>₹ 15000</div>
           </div>
-          <div className="third">
+          <div className="third prize">
               <img src={third} data-aos="fade-up" data-aos-delay="600" alt="" />
+              <div className='pricetag'>₹ 5000</div>
           </div>
          </div>
       </div>

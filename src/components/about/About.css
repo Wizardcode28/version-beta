@@ -10,15 +10,25 @@
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 
-    background: linear-gradient(270deg, #020f1f, #052733, #020f1f);
-    background-size: 600% 600%;
-    animation: gradientMove 5s ease infinite;
+    background: linear-gradient(
+        45deg,
+  #020f1f 0%,
+  #020f1f 20%,
+  #052733 35%,
+  #104469 60%,
+  #020f1f 85%,
+  #020f1f 100%
+  );
+
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease-in-out infinite alternate;
 }
 
 @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
+  /* 0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  100% { background-position: 0% 50%; } */
+   to {background-position: 100% 100%;}
 }
 
 .abouttitle{
@@ -42,7 +52,7 @@
 }
 .details{
     width: 50%;
-    color: #cb91c3;
+    color: #8ed97d;
     font-size: 18px;
     /* font-family: "League Spartan",sans-serif; */
 }

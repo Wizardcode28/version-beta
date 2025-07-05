@@ -90,21 +90,22 @@ const lightRef = useRef(null)
     <div className='herocontainer' ref={containerRef}>
       <div ref={lightRef} className="cursor-light"/>
 
-      <div className="content">
-        <div className="upper">
+        <div className="uppercontent">
           <div className="countdown">
-            <div>20</div>
-            <div>13</div>
-            <div>45</div>
-            <div>55</div>
+          <div>20  :</div>
+          <div>13  :</div>
+          <div>45  :</div>
+          <div>55 </div>
           </div>
           <div className="label">
-            <div>Days</div>
-            <div>Hours</div>
-            <div>Minutes</div>
-            <div>Seconds</div>
+          <div>Days</div>
+          <div>Hours</div>
+          <div>Minutes</div>
+          <div>Seconds</div>
           </div>
         </div>
+
+        <div className="content">
         <motion.div className='left' variants={leftvariants} initial="initial" animate="animate">
           {/* <motion.img src={version} className="version" style={{ scale} } alt="" /> */}
           <div className='name'>

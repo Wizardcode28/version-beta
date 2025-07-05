@@ -1,24 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Orbitron:wght@400..900&display=swap');
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #020f1f;
-}
-*{
-    /* outline: 1px solid lime; */
-}
+
 .schedulecontainer{
+    background-color: #020f1f;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right,#020f1f 0%,#020f1f 100%);
+    position: relative;
+    overflow-y: hidden;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;  /* Hide scrollbar for IE/Edge */
     scrollbar-width: none;     /* Hide scrollbar for Firefox */
 }
-.schedule-container::-webkit-scrollbar {
+*{
+    /* outline: 1px solid lime; */
+}
+.schedulecontainer::-webkit-scrollbar {
   display: none;  /* Hide scrollbar for Chrome/Safari */
 }
+
 .scheduletitle{
     /* width: 100vw;
     margin: auto; */
@@ -40,8 +39,25 @@ html, body {
     -ms-overflow-style: none;  
     scrollbar-width: none;    
 }
+.allcontainer::-webkit-scrollbar {
+  display: none;
+}
+.timelimit{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+.detailcont{
+width: 35%;
+display: flex;
+flex-direction: column;
+gap: 25px;
+align-items: center;
+/* justify-content: c; */
+}
 .timecontainer{
-    width: 35%;
+    width: 100%;
+    height: 90%;
     border: 2px solid #00f0ff;
     border-radius: 15px;
     display: flex;
@@ -49,7 +65,7 @@ html, body {
     justify-content: center;
     align-items: center;
     gap: 5%;
-    padding: 2% 0.3%;
+    padding: 6% 0.3%;
     background: linear-gradient(135deg,rgba(0, 0, 0, 0.85), rgba(10, 10, 25, 0.95));
     box-shadow: 0 0 15px 4px #00f0ff, inset 0 0 10px 2px #00f0ff;
     /* backdrop-filter: blur(5px); */
@@ -73,7 +89,7 @@ html, body {
 .card{
     color: rgb(178, 233, 185);
     font-size: 20px;
-    width: 100%;
+    width: 98%;
     min-height: 90%;
     background: rgba(0, 0, 0, 0.6);
     padding: 15px;
