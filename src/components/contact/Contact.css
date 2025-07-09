@@ -9,13 +9,34 @@
     padding: 80px 20px;
     text-align: center;
     overflow: hidden;
-    background: linear-gradient(to bottom, #370812,#892852);
+    background-color: #370812;
+    /* background: linear-gradient(to bottom, #370812,#892852); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.contacttitle{
-    color: aquamarine;
-    font-size:30px;
+.contactcontainer img{
+    width: 40px;
+}
+.leftcontacts,
+.rightcontacts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.heading{
+    color: rgb(137 123 226);
+    font-size: 40px;
     font-weight: bold;
-    font-family: "StateWide",sans-serif;
-    margin-bottom: 15vh;
-    text-shadow: rgb(230, 230, 230) 0px 0px 5px;
+}
+.cdetailcont{
+    display: flex;
+    gap: 15px;
+    width: 60%;
+}
+.cdetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

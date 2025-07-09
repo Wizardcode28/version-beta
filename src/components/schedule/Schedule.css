@@ -1,21 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Orbitron:wght@400..900&display=swap');
-
 .schedulecontainer{
     background-color: #020f1f;
     width: 100%;
     height: 100vh;
     position: relative;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;  /* Hide scrollbar for IE/Edge */
-    scrollbar-width: none;     /* Hide scrollbar for Firefox */
+    overflow: hidden;
+
 }
-*{
-    /* outline: 1px solid lime; */
-}
-.schedulecontainer::-webkit-scrollbar {
-  display: none;  /* Hide scrollbar for Chrome/Safari */
+.schedulecontainer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 40%, rgba(0, 255, 255, 0.06), transparent 70%),
+              radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.06), transparent 70%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .scheduletitle{
@@ -23,37 +21,37 @@
     margin: auto; */
     text-align: center;
     color: aquamarine;
+    text-shadow: rgb(230, 230, 230) 0px 0px 5px;
     font-size:30px;
     font-weight: bold;
     font-family: "StateWide",sans-serif;
-    margin-bottom: 15vh;
-    text-shadow: rgb(230, 230, 230) 0px 0px 5px;
+    margin-bottom: 6vh;
+    margin-top: 7vh;
+}
+*{
+    /* outline: 1px solid lime; */
 }
 .allcontainer{
     width: 150vw;
     display: flex;
     gap: 3%;
     padding: 20px;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;  
-    scrollbar-width: none;    
+    overflow: visible;
+    /* margin-bottom: 10vh; */
 }
-.allcontainer::-webkit-scrollbar {
-  display: none;
-}
+
 .timelimit{
     color: white;
     font-size: 30px;
     font-weight: bold;
 }
 .detailcont{
+    height: 68vh;
 width: 35%;
 display: flex;
 flex-direction: column;
 gap: 25px;
 align-items: center;
-/* justify-content: c; */
 }
 .timecontainer{
     width: 100%;
@@ -67,14 +65,14 @@ align-items: center;
     gap: 5%;
     padding: 6% 0.3%;
     background: linear-gradient(135deg,rgba(0, 0, 0, 0.85), rgba(10, 10, 25, 0.95));
-    box-shadow: 0 0 15px 4px #00f0ff, inset 0 0 10px 2px #00f0ff;
+    box-shadow: 0 0 15px 4px #245f44, inset 0 0 10px 2px #00f0ff;
     /* backdrop-filter: blur(5px); */
     text-align: center;
     transition: transform 0.3s ease; 
 }
 .timecontainer:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 20px 8px #00f0ff,inset 0 0 15px 3px #00f0ff;
+    box-shadow: 0 0 20px 8px #245f44,inset 0 0 15px 3px #00f0ff;
 }
 .timetitle{
     /* width: 100vw; */
@@ -88,6 +86,7 @@ align-items: center;
 }
 .card{
     color: rgb(178, 233, 185);
+    /* color: #556872; */
     font-size: 20px;
     width: 98%;
     min-height: 90%;
@@ -96,5 +95,6 @@ align-items: center;
     border-radius: 10px;
     transition: transform 0.3s ease;
     line-height: 1.5; 
-    scroll-snap-align: start;
+    font-family: Poppins;
 }
+

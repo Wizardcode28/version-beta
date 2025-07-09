@@ -1,13 +1,34 @@
 import React from 'react'
+import { useEffect,useRef } from 'react'
 import "./Schedule.css"
+import {gsap} from "gsap"
+import ScrollTrigger from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 const Schedule = () => {
-  
+  const containerRef= useRef(null)
+  useEffect(() => {
+    const element = containerRef.current
+    if(element){
+    gsap.to(element, {
+      x: () => -(element.scrollWidth - window.innerWidth),
+      ease: 'power1.inOut',
+      scrollTrigger: {
+        trigger: element,
+        start: 'top top',
+        end: () => `+=${element.scrollWidth}`,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      },
+    })
+  }
+  }, [])
   return (
     
     <div className='schedulecontainer' data-aos="zoom-in-up">
       
       <div className='scheduletitle'>Schedule</div>
-      <div className="allcontainer">
+      <div className="allcontainer" ref={containerRef}>
         <div className="detailcont">
           <div className='timelimit'>18th Oct</div>
           <div className="timecontainer" data-aos="zoom-in">

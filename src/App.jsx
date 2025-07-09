@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState,useRef } from 'react'
 import './App.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -7,8 +7,9 @@ import Hero from "./components/hero/Hero"
 import About from "./components/about/About"
 import Schedule from "./components/schedule/Schedule"
 import Prizes from "./components/prizes/Prizes"
-import Gallery2 from "./components/gallery2/Gallery2"
 import Gallery from "./components/gallery/Gallery"
+import Gallery2 from "./components/gallery2/Gallery2"
+import Gallery3 from "./components/gallery3/Gallery3"
 import Sponsors from "./components/sponsors/Sponsors"
 import Faqs from "./components/faqs/Faqs"
 import Contact from "./components/contact/Contact"
@@ -21,16 +22,54 @@ function App() {
     })
   },[])
   
+const lightRef = useRef(null)
+const containerRef = useRef(null)
 
+  useEffect(() => {
+    const container = containerRef.current
+    const light = lightRef.current
+
+    const handleMouseMove = (e) => {
+      if (container && light) {
+        const rect = container.getBoundingClientRect()
+        const x = e.clientX - rect.left
+        const y = e.clientY - rect.top
+
+        light.style.left = `${x}px`
+        light.style.top = `${y}px`
+        light.style.opacity = 1
+      }
+    }
+
+    const handleMouseLeave = () => {
+      if (light) {
+        light.style.opacity = 0
+      }
+    }
+
+    if (container) {
+      container.addEventListener("mousemove", handleMouseMove)
+      container.addEventListener("mouseleave", handleMouseLeave)
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener("mousemove", handleMouseMove)
+        container.removeEventListener("mouseleave", handleMouseLeave)
+      }
+    }
+  }, [])
   return (
-    <div>
+    <div className='maincontainer' ref={containerRef}>
+      <div ref={lightRef} className="cursor-light"/>
       <Navbar/>
       <Hero/>
       <About/>
       <Schedule/>
       <Prizes/>
       {/* <Gallery/> */}
-      <Gallery2/>
+      {/* <Gallery2/> */}
+      <Gallery3/>
       <Sponsors/>
       <Faqs/>
       <Contact/>

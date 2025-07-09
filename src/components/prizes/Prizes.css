@@ -3,6 +3,12 @@
     height: 100vh;
     text-align: center;
     background-color: #020f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*{
+    /* outline: 1px solid lime; */
 }
 #confetti-canvas{
     position: absolute;
@@ -14,22 +20,28 @@
     z-index: 0;
 }
 .prizescontent{
+    width: 100%;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
 }
 .prizetitle{
     color: aquamarine;
     font-size:30px;
     font-weight: bold;
     font-family: "StateWide",sans-serif;
-    margin-bottom: 15vh;
+    /* margin-bottom: 15vh; */
     text-shadow: rgb(230, 230, 230) 0px 0px 5px;
 }
 .prizes{
     padding: 5%;
     display: flex;
     justify-content: center;
-    gap: 5%;
+    gap: 6%;
 }
 img{
     /* outline: 1px solid lime; */
