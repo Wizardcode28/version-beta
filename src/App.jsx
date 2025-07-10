@@ -65,6 +65,7 @@ const containerRef = useRef(null)
       <Navbar/>
       <Hero/>
       <About/>
+      <div className='transition-bridge'></div>
       <Schedule/>
       <Prizes/>
       {/* <Gallery/> */}

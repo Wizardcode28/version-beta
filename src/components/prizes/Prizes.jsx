@@ -1,12 +1,12 @@
 import React from 'react'
-import { useEffect,useRef } from 'react'
+import { useEffect,useRef} from 'react'
 import "./Prizes.css"
 import one from "../../assets/one.png"
 import second from "../../assets/second.png"
 import third from "../../assets/third.png"
 const Prizes = () => {
-  const prizeRef = useRef(null)
 
+  const prizeRef = useRef(null)
   useEffect(() => {
     // ensure confetti is available
     if (typeof confetti !== 'function') return
@@ -43,6 +43,8 @@ const Prizes = () => {
 
   return (
     <div id='prizecontainer' ref={prizeRef}>
+      {/* <ParticlesBackground/> */}
+      {/* <TwinklingStars/> */}
       <canvas id='confetti-canvas'></canvas>
       <div className="prizescontent">
          <div className="prizetitle">Prizes</div>

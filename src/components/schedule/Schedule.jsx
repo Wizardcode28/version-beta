@@ -5,30 +5,53 @@ import {gsap} from "gsap"
 import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 const Schedule = () => {
-  const containerRef= useRef(null)
+  const wrapperRef= useRef(null)
+  const scrollerRef= useRef(null)
+  
   useEffect(() => {
-    const element = containerRef.current
-    if(element){
-    gsap.to(element, {
-      x: () => -(element.scrollWidth - window.innerWidth),
-      ease: 'power1.inOut',
+  const wrapper= wrapperRef.current
+  const scroller = scrollerRef.current   
+  if(!wrapperRef || !scrollerRef) return;
+  ScrollTrigger.refresh();
+  const totalScroll = scroller.scrollWidth - window.innerWidth;
+    // Use scrollWidth for accurate height
+  const updateHeight = () => {
+    wrapper.style.height = `${window.innerHeight + totalScroll}px`;
+    ScrollTrigger.refresh();
+  };
+  updateHeight();
+
+  // wrapper.style.height = `${window.innerHeight + totalScroll}px`;
+    gsap.to(scroller, {
+      x: () => -(scroller.scrollWidth - window.innerWidth),
+      ease:"none",
       scrollTrigger: {
-        trigger: element,
+        trigger: wrapper,
         start: 'top top',
-        end: () => `+=${element.scrollWidth}`,
+        end: () => `+=${scroller.scrollWidth - window.innerWidth}`,
         scrub: true,
-        pin: true,
+        pinSpacing:false,
+        pin: wrapper,
         anticipatePin: 1,
+        markers:false,
+        invalidateOnRefresh: true,
       },
     })
-  }
+    window.addEventListener("resize", updateHeight);
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+      ScrollTrigger.getAll().forEach(st => st.kill());
+    }
+
   }, [])
+
+  
   return (
     
-    <div className='schedulecontainer' data-aos="zoom-in-up">
+    <div className='schedulecontainer' ref={wrapperRef} >
       
       <div className='scheduletitle'>Schedule</div>
-      <div className="allcontainer" ref={containerRef}>
+      <div className="allcontainer" ref={scrollerRef}>
         <div className="detailcont">
           <div className='timelimit'>18th Oct</div>
           <div className="timecontainer" data-aos="zoom-in">

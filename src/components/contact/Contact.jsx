@@ -2,8 +2,8 @@ import React from 'react'
 import "./Contact.css"
 const Contact = () => {
   return (
-    <div className='contactcontainer'>
-
+  <div className='contactcontainer'>
+    <div className="contacts">
       <div className="leftcontacts">
         <div className="heading">Contact Us</div>
         <div className='mobile cdetailcont'>
@@ -15,33 +15,45 @@ const Contact = () => {
         </div>
         <div className='location cdetailcont'>
           <img src="Images/location1.png" alt="" />
-          <div className="cdetail">Maulana Azad National Institute of Technology Bhopal, 462003 (M.P.)</div>
+          <div className="cdetails">Maulana Azad National Institute of Technology Bhopal, 462003 (M.P.)</div>
         </div>
         <div className="gmail cdetailcont">
           <img src="Images/mail.svg" alt="" />
-          <div className="cdetail">istescmanit@gmail.com</div>
+          <div className="cdetails">istescmanit@gmail.com</div>
         </div>
       </div>
 
       <div className="rightcontacts">
         <div className="heading">Social Links</div>
-        <div className='insta cdetailcont'>
+        <div className='media cdetailcont'>
           <a href="https://www.instagram.com/istemanit/"><img src="Images/instagram.png" alt="" /></a>
-          <div className="cdetails">
+          {/* <div className="cdetails"> */}
             <a href="https://www.instagram.com/istemanit/">Instagram</a>
-          </div>
+          {/* </div> */}
         </div>
-        <div className='facebook cdetailcont'>
+        <div className='media cdetailcont'>
           <a href="https://www.facebook.com/ISTESCMANIT"><img src="Images/facebook.svg" alt="" /></a>
           <a href="https://www.facebook.com/ISTESCMANIT">Facebook</a>
         </div>
-        <div className="linkedin cdetailcont">
+        <div className="media cdetailcont">
           <a href="https://www.linkedin.com/company/iste-sc-manit/"><img src="Images/linkedin.svg" alt="" /></a>
           <a href="https://www.linkedin.com/company/iste-sc-manit/">LinkedIn</a>
         </div>
       </div>
-
     </div>
+      <div className='other'>
+        <hr />
+        <div className='otherdiv'>
+          <div>Code of Conduct Devfolio</div>
+          <div>Rule Book</div>
+        </div>
+        <hr />
+          <div>
+          Copyright © 2023 by <span className='istename'>ISTE-SC MANIT</span>. All rights reserved.
+          </div>
+      </div>
+    
+  </div>
   )
 }
 

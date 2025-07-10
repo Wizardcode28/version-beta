@@ -6,10 +6,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
-*{
-    /* outline: 1px solid lime; */
-}
+
 #confetti-canvas{
     position: absolute;
     top: 0;
@@ -59,6 +58,7 @@ img{
     color: grey;
     font-size: 30px;
     font-weight: bold;
+    font-family: Poppins;
 }
 .second{
     transform: scale(0.8);
@@ -69,4 +69,11 @@ img{
 .prizes div img{
     width: 250px;
     object-fit: cover;
+}
+
+/* media queries */
+@media screen and (max-width:852px){
+    .prizes{
+        /* max-width: 100%; */
+    }
 }

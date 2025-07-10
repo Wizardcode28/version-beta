@@ -23,7 +23,7 @@ const Gallery3 = () => {
     <div className="gallery-container">
       <div className="swiper-slide">
       <Swiper
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation,EffectCoverflow]}
         spaceBetween={30}
         slidesPerView={3}
         loop={true}
@@ -32,13 +32,19 @@ const Gallery3 = () => {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         className="mySwiper"
 
-        effect="coverflow"
-        coverflowEffect={{
-        rotate: 30,
-        stretch: 0,
-        depth: 100,
-        modifier: 2,
-        slideShadows: true,
+        // effect="coverflow"
+        // coverflowEffect={{
+        // rotate: 30,
+        // stretch: 0,
+        // depth: 100,
+        // modifier: 2,
+        // slideShadows: true,
+        // }}
+
+        breakpoints={{
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
         }}
         >
         {images.map((img, index) => (

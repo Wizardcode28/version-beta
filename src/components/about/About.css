@@ -6,7 +6,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5vh;
+    gap: 8vh;
+    padding-bottom: 7vh;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     position: relative;
@@ -49,6 +50,7 @@
     align-items: center;
     gap: 5vh;
 }
+
 .about{
     width: 50%;
     height: auto;
@@ -62,11 +64,30 @@
     width: 50%;
     /* color: #8ed97d; */
     color: rgb(216, 181, 181);
+    color: rgb(216, 181, 181);
     font-size: 17px;
     font-family: "Roboto",sans-serif;
+    
 }
 .versionbeta{
     font-size: 30px;
-    color: violet;
+    color: #ff00cc;
     font-family: "League Spartan",sans-serif;
+}
+/* media queries */
+@media screen and (max-width:1168px){
+    .cont{
+        width: 93%;
+    }
+}
+@media screen and (max-width:908px){
+    .cont{
+        flex-direction: column;
+    }
+    .about{
+        width: 75%;
+    }
+    .details{
+        width: 75%;
+    }
 }
