@@ -54,6 +54,8 @@
     width:90%;
     color: 	#E0DADC;
     font-family: 'Montserrat';
+    font-size: 20px;
+    font-family: 'Montserrat';
     /* color: 	#A0888C; */
 }
 .cdetails{
@@ -65,10 +67,6 @@
     /* align-items: center; */
     gap: 10px;
     font-size: 20px;
-}
-.cdetailcont{
-    font-size: 20px;
-    font-family: 'Montserrat';
 }
 .cdetailcont a{
     text-decoration: none;
@@ -93,17 +91,15 @@
 .istename{
     color: #FF6F61;
 }
-hr{
-    /* color: grey; */
-}
+
 /* media queries */
 @media screen and (max-width:1088px){
     .contacts{
-        width: 80%;
+        width: 100%;
     }
 }
-@media screen and (max-width:1088px){
-    .contacts{
+@media screen and (max-width:900px){
+    .leftcontacts .cdetailcont{
         width: 100%;
     }
 }
@@ -118,7 +114,26 @@ hr{
         align-items: start;
         /* height:40vh; */
     }
-    .heading{
-        margin-top: 20px;
+    .leftcontacts,.rightcontacts .heading{
+        margin-top: 40px;
+    }
+    .other{
+        margin-top: 40px;
     }
 }
+@media screen and (max-width:592px){
+    .leftcontacts .heading{
+        margin-top: 40px;
+    }
+    .cdetailcont{
+        width: 100%;
+    }
+    .contactcontainer{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .contacts{
+        padding: 4%;
+    } 
+}
+

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Navbar.css"
-import logo from "../../assets/logo.png"
+import logo from "../../assets/newlogo.png"
 import {motion} from "framer-motion"
 const imgvariants={
   initial:{
@@ -58,6 +58,9 @@ const Navbar = () => {
                   <motion.li variants={livariants}>FAQS</motion.li>
               </motion.ul>
         </motion.div>
+        <div>
+          <img src="./Images/menu.svg" className='menu' alt="" />
+        </div>
       </div>
     </div>
   )

@@ -49,3 +49,18 @@
     /* margin-top: 8px; */
     color: aquamarine;
 }
+@media screen  and (max-width:1000px){
+    .faq{
+        width: 70%;
+    }
+}
+@media screen  and (max-width:786px){
+    .faq{
+        width: 90%;
+    }
+}
+@media screen  and (max-width:484px){
+    .faq{
+        width: 95%;
+    }
+}

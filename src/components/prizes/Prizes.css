@@ -75,5 +75,17 @@ img{
 @media screen and (max-width:852px){
     .prizes{
         /* max-width: 100%; */
+        /* gap: 0%; */
+        padding: 0%;
+        padding-top: 6%;
+    }
+
+    .prizecontent{
+        /* width: 90%; */
+    }
+}
+@media screen and (max-width:748px){
+    .prizes{
+        flex-direction: column;
     }
 }

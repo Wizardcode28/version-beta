@@ -95,7 +95,7 @@ const Hero = () => {
       
         <div className="content">
         <motion.div className='left' variants={leftvariants} initial="initial" animate="animate">
-          <motion.img src={version} className="version" alt="" />
+          <motion.img src={version} className="version" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0,1]}} alt="" />
           {/* <div className='name'>
             <div className='upper'>Version Beta</div>
             <div className='lower'>8.0</div>
@@ -121,11 +121,11 @@ const Hero = () => {
           </div>
           <div className="label">
           <div>Days</div>
-          <div></div>
+          {/* <div></div> */}
           <div>Hours</div>
-          <div></div>
+          {/* <div></div> */}
           <div>Minutes</div>
-          <div></div>
+          {/* <div></div> */}
           <div>Seconds</div>
           </div>
         </div>

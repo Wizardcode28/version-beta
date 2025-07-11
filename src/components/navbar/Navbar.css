@@ -1,20 +1,22 @@
-*{
-    /* outline: 1px solid lime; */
-}
 .navcontainer{
     font-family: "StateWide",sans-serif;
     width: 100%;
-    margin-top: 3.1vh;
+    /* padding-top: 3.1vh; */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    /* position: absolute; */
     z-index: 10;
     position: fixed;
+    top: 0;
+    left: 0;
 }
+
 .navcontent{
+    margin-top: 20px;
     width: 80%;
-    /* padding: 20px; */
+    height: 60px;
+    /* padding: 2px; */
     background-color: rgba(103, 130, 246, 0.29);
     border-radius: 20px;
     display: flex;
@@ -22,13 +24,12 @@
     align-items: center;
 
     background: rgba(255, 255, 255, 0.1);  /* transparent white */
-  backdrop-filter: blur(5px);          /* blur the background behind */
-  -webkit-backdrop-filter: blur(10px);  /* for Safari */
+  backdrop-filter: blur(3px);          /* blur the background behind */
   border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .istelogo{
-    width: 90px;
+    width: 100px;
     /* transform: scale(2); */
 }
 .nav ul{
@@ -41,9 +42,33 @@
     font-weight: bold;
     cursor: pointer;
 }
+.menu{
+    display: none;
+}
 /* media queries */
 @media screen and (max-width:1168px){
     .navcontent{
         width: 93%;
+    }
+}
+@media screen and (max-width:992px){
+    .navcontent{
+        width: 98%;
+    }
+    .nav ul li{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:898px){
+    .nav{
+        display: none;
+    }
+    .menu{
+        display:block ;
+    }
+    .navcontent{
+        justify-content: space-between;
+        padding: 0px 30px;
+        width: 88%;
     }
 }
