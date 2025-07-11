@@ -1,7 +1,7 @@
 .sponsorscontainer{
     width: 100%;
     background:linear-gradient(to bottom, black, #0b0b08);
-    min-height: 250vh;
+    min-height: 100vh;
     padding: 80px 20px;
     text-align: center;
     overflow: hidden;
@@ -15,7 +15,7 @@
     font-size:30px;
     font-weight: bold;
     font-family: "StateWide",sans-serif;
-    margin-bottom: 15vh;
+    /* margin-bottom: 15vh; */
     text-shadow: rgb(230, 230, 230) 0px 0px 5px;
 }
 .sponsors-marquee{
@@ -26,7 +26,7 @@
 .sponsors{
     display: flex;
     flex-wrap: wrap;
-    gap: 20vh;
+    gap: 60px;
     /* overflow: hidden; */
     white-space: nowrap;
     align-items: center;

@@ -117,17 +117,17 @@
     color: #ff7575;
     color: 	#00FFF1;
     font-size: 40px;
-    height: 20vh;
+    height: 19vh;
     /* outline: 1px solid lime; */
     background: linear-gradient(90deg, #FF4F79, #00FFF1,#FF4F79);
     -webkit-background-clip: text;
     color: transparent;
     text-shadow: 0px 0px 50px #00FFF1;
     font-weight: bolder;
-    font-family: Poppins;
+    /* font-family: Poppins;
     font-family: Playfair Display;
     font-family: Ubuntu;
-    font-family: Montserrat;
+    font-family: Montserrat; */
     font-family: Orbitron;
 }
 .title:hover{
@@ -151,10 +151,10 @@
     text-shadow: 0px 0px 20px #00FFF1;
     animation: opac 3s infinite ease-in-out;
     font-weight: 600;
-    font-family: Ubuntu;
+    /* font-family: Ubuntu;
     font-family: Poppins;
     font-family: Playfair Display;
-    font-family: Montserrat;
+    font-family: Montserrat; */
     font-family: Orbitron;
     margin-bottom: 30px;
 }
@@ -235,14 +235,26 @@
 @media screen and (max-width:800px) {
     .content{
         flex-direction: column;
-        /* width: 100%; */
+        width: 93%;
     }
     .left,.right{
         width: 100%;
         text-align: center;
     }
+    .version{
+        margin-top: 50px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
     .herocontainer{
-        background-image: none;
+        background-image: url("/Images/heroverticalcut2.png");
+    }
+    .desc{
+        width: 100%;
+    }
+    .title{
+        height: 15vh;
+        font-size: 40px;
     }
 }
 @media screen and (max-width:632px) {
@@ -263,5 +275,8 @@
     .label{
         gap: 15px;
         font-size: 25px;
+    }
+    .lowercontent{
+        margin-bottom: 50px;
     }
 }

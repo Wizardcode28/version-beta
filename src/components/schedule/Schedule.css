@@ -32,7 +32,8 @@
 }
 
 .allcontainer{
-    width: 200vw;
+    width: max-content;
+    min-width: 100vw;
     display: flex;
     gap: 3%;
     padding: 20px;
@@ -45,8 +46,8 @@
     font-weight: bold;
 }
 .detailcont{
-    height: 68%;
-    width: 35%;
+    height: 45vh;
+    width: 500px;
     display: flex;
     flex-direction: column;
     gap: 25px;

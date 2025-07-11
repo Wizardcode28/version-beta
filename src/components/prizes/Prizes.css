@@ -84,8 +84,17 @@ img{
         /* width: 90%; */
     }
 }
-@media screen and (max-width:748px){
+@media screen and (max-width:788px){
     .prizes{
         flex-direction: column;
     }
+    #prizecontainer{
+        height: auto;
+        min-height: 100vh;
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+}
+*{
+    outline: 1px solid lime;
 }
