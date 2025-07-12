@@ -49,7 +49,7 @@ const Contact = () => {
         </div>
         <hr />
           <div>
-          Copyright © 2023 by <span className='istename'>ISTE-SC MANIT</span>. All rights reserved.
+          Copyright © 2025 by <span className='istename'><a href="https://www.istemanit.in/" target='_blank'>ISTE-SC MANIT</a></span>. All rights reserved.
           </div>
       </div>
     

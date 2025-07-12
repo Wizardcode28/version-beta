@@ -46,7 +46,6 @@
     font-weight: bold;
 }
 .detailcont{
-    height: 45vh;
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -145,8 +144,8 @@
     font-family: 'Poppins';
 }
 @media screen and (max-width:924px) {
-    .allcontainer{
-        /* width: 500vw; */
+    .detailcont{
+        height: 45vh;
     }
 }
 

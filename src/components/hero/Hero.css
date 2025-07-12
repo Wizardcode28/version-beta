@@ -163,12 +163,18 @@
     color: #f5cec9;
     color: #72FFFF;
     text-shadow: 0px 0px 20px #00FFF1;
-    width: 90%;
+    width: 100%;
     font-weight: 500;
     font-family: Montserrat;
     font-family: Poppins;
     font-family: Ubuntu;
     font-family: Orbitron;
+    color: #fff;
+     text-shadow:
+    0 0 5px rgba(255,255,255,0.8),
+    0 0 5px rgba(255,255,255,0.6),
+    0 0 15px rgba(223,102,102,0.8),
+    0 0 25px rgba(223,102,102,0.6);
 }
 .version{
     width: 90%;
