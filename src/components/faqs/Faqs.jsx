@@ -1,8 +1,17 @@
 import React from 'react'
 import "./Faqs.css"
 import down from "../../assets/arrow_down.png"
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Faqs = () => {
+  useEffect(() => {
+      AOS.init({
+        duration:1000,
+        once:true
+      })
+    },[])
   const [currIndex, setcurrIndex] = useState(-1)
   const handleClick=(index)=>{
     setcurrIndex(currIndex==index? -1 : index)
@@ -12,7 +21,7 @@ const Faqs = () => {
       <div className='faqstitle'>Faqs</div>
       <div className="faqs">
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(0)}} >
+            <div className="question" onClick={()=>{handleClick(0)}} data-aos="fade-right"  data-aos-delay="0">
               Who are we?
               <img src={down} alt=""/>
             </div>
@@ -28,7 +37,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(1)}} >
+            <div className="question" onClick={()=>{handleClick(1)}} data-aos="fade-left"  data-aos-delay="150">
               What are we looking in a team?
               <img src={down}alt="" />
             </div>
@@ -43,7 +52,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(2)}} >
+            <div className="question" onClick={()=>{handleClick(2)}} data-aos="fade-right"  data-aos-delay="300">
               What is version beta?
               <img src={down}alt="" />
             </div>
@@ -58,7 +67,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(3)}}>
+            <div className="question" onClick={()=>{handleClick(3)}} data-aos="fade-left" data-aos-delay="450">
               Will Hackathon be conducted online?
               <img src={down} alt="" />
             </div>
@@ -71,7 +80,7 @@ const Faqs = () => {
 
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(4)}} >
+            <div className="question" onClick={()=>{handleClick(4)}} data-aos="fade-right" data-aos-delay="600">
               Who should participate?
               <img src={down}alt="" />
             </div>
@@ -86,7 +95,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(5)}}>
+            <div className="question" onClick={()=>{handleClick(5)}} data-aos="fade-left" data-aos-delay="750">
               What is the goal of Hackathon?
               <img src={down}alt="" />
             </div>
@@ -99,7 +108,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(6)}}>
+            <div className="question" onClick={()=>{handleClick(6)}} data-aos="fade-right" data-aos-delay="900">
               Number of members in a team?
               <img src={down} alt="" />
             </div>
@@ -113,7 +122,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(7)}}>
+            <div className="question" onClick={()=>{handleClick(7)}} data-aos="fade-left" data-aos-delay="1050">
               How would I know if I got selected?
               <img src={down} alt="" />
             </div>
@@ -125,7 +134,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(8)}}>
+            <div className="question" onClick={()=>{handleClick(8)}} data-aos="fade-right" data-aos-delay="1200">
               How to participate?
               <img src={down} alt="" />
             </div>
@@ -138,7 +147,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(9)}}>
+            <div className="question" onClick={()=>{handleClick(9)}} data-aos="fade-left" data-aos-delay="1350">
               Cost for participation in Hackathon?
               <img src={down} alt="" />
             </div>
@@ -151,7 +160,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(10)}}>
+            <div className="question" onClick={()=>{handleClick(10)}} data-aos="fade-right" data-aos-delay="1500">
               What is selection procedure?
               <img src={down} alt="" />
             </div>

@@ -92,7 +92,9 @@
     gap: 90px;
     font-size: 32px;
     font-family: "League Spartan",sans-serif;
-    color: #d1bfbf;
+    color: #cbd5e1;
+    font-family: Ubuntu;
+    
 }
 .content{
     margin-top: 15%;
@@ -180,6 +182,24 @@
     width: 90%;
     animation: opac 3s infinite ease-in-out;
 }
+.timeline{
+    display: flex;
+    color: #cbd5e1;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Poppins;
+}
+.timeline img{
+    width: 18px;
+}
+.date,.place{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    
+}
+
 .name{
     color: rgb(255, 244, 225);
     text-shadow: rgb(230, 230, 230) 0px 0px 10px;
@@ -192,6 +212,8 @@
     width: 50%;
     text-align: center;
     display: flex;
+    flex-direction: column;
+    gap: 15px;
     align-items: center;
     justify-content: center;
 }
@@ -227,6 +249,11 @@
     font-family: Poppins;
     margin-bottom: 5%;
 }
+@media screen and  (max-width:1200px){
+    .content{
+        width: 93%;
+    }
+}
 @media screen and (max-width:1168px){
     @keyframes bgZoom {
     0% {
@@ -241,7 +268,6 @@
 @media screen and (max-width:800px) {
     .content{
         flex-direction: column;
-        width: 93%;
     }
     .left,.right{
         width: 100%;
@@ -283,6 +309,6 @@
         font-size: 25px;
     }
     .lowercontent{
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
 }

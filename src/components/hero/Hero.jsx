@@ -96,6 +96,16 @@ const Hero = () => {
         <div className="content">
         <motion.div className='left' variants={leftvariants} initial="initial" animate="animate">
           <motion.img src={version} className="version" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0,1]}} alt="" />
+          <div className="timeline">
+            <div className="date">
+              <img src="./Images/calendar.png" alt="" />
+              <div>Nov 8th - Nov 10th 2024</div>
+            </div>  
+            <div className="place">
+              <img src="./Images/location1.png" alt="" />
+              <div>MANIT,Bhopal</div>
+            </div>   
+          </div>
           {/* <div className='name'>
             <div className='upper'>Version Beta</div>
             <div className='lower'>8.0</div>

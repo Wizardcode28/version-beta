@@ -1,12 +1,10 @@
 import React from 'react'
-import "./Sponsors.css"
+import "./Sponsors2.css"
 const Sponsors = () => {
   return (
     <div className='sponsorscontainer'>
       <div className='sponsorstitle'>Sponsors</div>
       
-      <div className="sponsors-marquee">
-  
       <div className="sponsors">
         <a href="https://amul.com/index.php" target="blank">
             <img
@@ -200,8 +198,6 @@ const Sponsors = () => {
               loading="lazy"
             />
           </a>
-
-      </div>
       </div>
     </div>
   )

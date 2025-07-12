@@ -6,14 +6,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10vh;
+  /* padding-bottom: 10vh; */
 }
 .gallerytitle{
+    z-index: 1;
     color: aquamarine;
     font-size:30px;
     font-weight: bold;
     font-family: "StateWide",sans-serif;
-    margin-top: 5vh;
+    margin-top: 70px;
     /* margin-bottom: 5vh; */
     text-shadow: rgb(230, 230, 230) 0px 0px 5px;
 }
