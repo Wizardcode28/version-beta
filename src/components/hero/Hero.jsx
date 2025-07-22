@@ -60,7 +60,7 @@ const Hero = () => {
       seconds: Math.floor((total / 1000) % 60),
     };
   };
-
+  
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
   useEffect(() => {
@@ -72,10 +72,10 @@ const Hero = () => {
   }, [targetDate]);
   const format = (value) => value.toString().padStart(2, '0');
   
-  const typedElement= useRef(null)
-  const typedInstance= useRef(null)
+
+  const el= useRef(null)
   useEffect(() => {
-    typedInstance.current= new Typed (typedElement.current,{
+    const typed= new Typed (el.current,{
       strings: ["Crack the Code. Claim the Glory !","Ready to debug Your limits!", "VERSION BETA 8.0"],
       typeSpeed: 50,
       backSpeed: 30,
@@ -83,13 +83,13 @@ const Hero = () => {
       backDelay: 1500,
       showCursor: false,
       // cursorChar: "|"
-    })
-  
+    }) 
     return () => {
-      typedInstance.current.destroy()
+      typed.destroy()
     }
   }, [])
   
+
   return (
     <div className='herocontainer herofade'>
       
@@ -112,7 +112,7 @@ const Hero = () => {
           </div> */}
         </motion.div>
         <motion.div className="right" variants={rightcontainervariants} initial="initial" animate="animate" exit={{opacity:0}}>
-          <motion.div className='title' variants={childvariants} ref={typedElement}></motion.div>
+          <motion.div className='title' variants={childvariants} ref={el}></motion.div>
           <motion.div className='subtitle' variants={childvariants}>Welcome to Version Beta 8.0</motion.div>
           <motion.p className='desc' variants={childvariants}>Enter the arena where bugs fall, and coders rise! Where every error fuels your next breakthrough!</motion.p>
         </motion.div>

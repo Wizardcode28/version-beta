@@ -274,7 +274,7 @@
         text-align: center;
     }
     .version{
-        margin-top: 50px;
+        margin-top: 180px;
         width: 100%;
         margin-bottom: 50px;
     }
@@ -298,6 +298,16 @@
     }
 }
 @media screen and (max-width:512px) {
+    .timeline{
+        flex-direction: column;
+        margin-bottom: 70px;
+    }
+    .desc{
+        margin-bottom: 50px;
+    }
+    .btn{
+        margin-bottom: 50px;
+    }
     .countdown .time{
         width: 70px;
         padding: 9px 9px;

@@ -101,4 +101,7 @@
     .details{
         width: 95%;
     }
+    .aboutcontainer{
+        height: 115vh;
+    }
 }
