@@ -148,4 +148,10 @@
         height: 45vh;
     }
 }
-
+@media screen and (max-width:512px){
+    .detailcont{
+        height: max-content;
+        /* width: 450px; */
+        width: 100vw;
+    }
+}  

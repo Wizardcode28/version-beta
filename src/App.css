@@ -56,3 +56,8 @@
   font-style: italic;
   font-display: swap;
 }
+@media screen and (max-width:632px){
+  .cursor-light{
+    display: none;
+  }
+}

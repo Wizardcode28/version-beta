@@ -5,6 +5,7 @@
 }
 .contactcontainer{
     width: 100%;
+    height: max-content;
     padding: 80px 20px;
     text-align: center;
     overflow: hidden;
@@ -22,7 +23,7 @@
     justify-content: center;
     align-items: center;
     width: 70%;
-    height: 40vh;
+    /* height: 40vh; */
     margin-bottom: 10vh;
 }
 .contactcontainer img{
@@ -126,6 +127,9 @@
     .leftcontacts .heading{
         margin-top: 40px;
     }
+    /* .rightcontacts .heading{
+        margin-top: 100px;
+    } */
     .cdetailcont{
         width: 100%;
     }
@@ -135,6 +139,7 @@
     }
     .contacts{
         padding: 4%;
+        /* gap: 0px; */
     } 
-}
+}  
 

@@ -24,12 +24,11 @@ const Gallery3 = () => {
       <div className='gallerytitle'>Gallery</div>
       <div className="swiper-slide">
       <Swiper
-        modules={[Autoplay, Pagination, Navigation,EffectCoverflow]}
+        modules={[Autoplay, Pagination, EffectCoverflow]}
         spaceBetween={30}
         slidesPerView={3}
         loop={true}
         pagination={{ clickable: true }}
-        navigation
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         className="mySwiper"
 

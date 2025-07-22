@@ -9,7 +9,7 @@
     background-position: center;
     /* background-blend-mode: overlay; */
     width: 100%;
-    min-height: cal(100vh-60px);
+    min-height: calc(100vh-60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -280,6 +280,7 @@
     }
     .herocontainer{
         background-image: url("/Images/heroverticalcut2.png");
+        min-height: 100vh;
     }
     .desc{
         width: 100%;
