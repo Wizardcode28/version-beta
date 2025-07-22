@@ -94,14 +94,16 @@
         margin-top: 40px;
     }
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:512px){
     .about{
         width: 95%;
+        margin-bottom: 20px;
     }
     .details{
         width: 95%;
     }
     .aboutcontainer{
-        height: 115vh;
+        height: 125vh;
     }
+
 }
