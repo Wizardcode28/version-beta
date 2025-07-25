@@ -19,7 +19,7 @@
     text-shadow: rgb(230, 230, 230) 0px 0px 5px;
 }
 .sponsors{
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -36,4 +36,9 @@
 }
 .img{
     width: 180px;
+}
+@media screen and (max-width:900px){
+    .img{
+        width: 60px;
+    }
 }

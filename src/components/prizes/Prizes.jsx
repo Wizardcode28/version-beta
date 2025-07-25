@@ -1,11 +1,11 @@
 import React from 'react'
-import { useEffect,useRef} from 'react'
+import { useState,useEffect,useRef} from 'react'
 import "./Prizes.css"
 import one from "../../assets/one.png"
 import second from "../../assets/second.png"
 import third from "../../assets/third.png"
 const Prizes = () => {
-
+  const [hasRained,setHasRained]= useState(false)
   const prizeRef = useRef(null)
   useEffect(() => {
     // ensure confetti is available
@@ -13,7 +13,8 @@ const Prizes = () => {
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasRained) {
+          setHasRained(true)
           const rainDuration = 3000 // milliseconds
           const rainEnd = Date.now() + rainDuration;
 
@@ -39,7 +40,7 @@ const Prizes = () => {
     return () => {
       if (prizeRef.current) observer.unobserve(prizeRef.current)
     }
-  }, [])
+  }, [hasRained])
 
   return (
     <div id='prizecontainer' ref={prizeRef}>
