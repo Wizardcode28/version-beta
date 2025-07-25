@@ -13,6 +13,7 @@ import Gallery3 from "./components/gallery3/Gallery3"
 import Sponsors from "./components/sponsors/Sponsors"
 import Faqs from "./components/faqs/Faqs"
 import Contact from "./components/contact/Contact"
+import Footer from "./components/Footer"
 
 function App() {
   useEffect(() => {
@@ -73,7 +74,8 @@ const containerRef = useRef(null)
       <Gallery3/>
       <Sponsors/>
       <Faqs/>
-      <Contact/>
+      {/* <Contact/> */}
+      <Footer/>
     </div>
   )
 }

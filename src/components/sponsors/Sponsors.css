@@ -1,6 +1,7 @@
 .sponsorscontainer{
     width: 100%;
-    background:linear-gradient(to bottom, black, #0b0b08);
+    /* background:linear-gradient(to bottom, black, #0b0b08); */
+    background-color: #020F1F;
     min-height: 100vh;
     padding: 80px 20px;
     text-align: center;
