@@ -60,9 +60,12 @@
     font-size: 25px;
     justify-content: start;
     font-weight: bold;
-    text-shadow: 0 0 2px rgb(230, 230, 230);
 }
-
+.timetitle{
+    background: linear-gradient(90deg, #FF4F79, #00FFF1,#FF4F79);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
 .small{
     width: 70px;
