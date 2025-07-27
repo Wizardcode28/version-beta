@@ -34,9 +34,9 @@ const Gallery3 = () => {
 
         // effect="coverflow"
         // coverflowEffect={{
-        // rotate: 30,
+        // rotate: -10,
         // stretch: 0,
-        // depth: 100,
+        // depth: 0,
         // modifier: 2,
         // slideShadows: true,
         // }}

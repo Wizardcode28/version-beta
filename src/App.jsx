@@ -5,15 +5,14 @@ import 'aos/dist/aos.css';
 import Navbar from "./components/navbar/Navbar"
 import Hero from "./components/hero/Hero"
 import About from "./components/about/About"
-import Schedule from "./components/schedule/Schedule"
+import Schedule2 from "./components/schedule2/Schedule2"
 import Prizes from "./components/prizes/Prizes"
 import Gallery from "./components/gallery/Gallery"
 import Gallery2 from "./components/gallery2/Gallery2"
 import Gallery3 from "./components/gallery3/Gallery3"
 import Sponsors from "./components/sponsors/Sponsors"
 import Faqs from "./components/faqs/Faqs"
-import Contact from "./components/contact/Contact"
-import Footer from "./components/Footer"
+import Footer from "./components/Footer.jsx"
 
 function App() {
   useEffect(() => {
@@ -67,14 +66,18 @@ const containerRef = useRef(null)
       <Hero/>
       <About/>
       <div className='transition-bridge'></div>
-      <Schedule/>
+      {/* <Schedule/> */}
+      <Schedule2/>
       <Prizes/>
       {/* <Gallery/> */}
       {/* <Gallery2/> */}
       <Gallery3/>
       <Sponsors/>
       <Faqs/>
+<<<<<<< HEAD
       {/* <Contact/> */}
+=======
+>>>>>>> a600cd183a643a6498e268fddd565c4727eb5fb0
       <Footer/>
     </div>
   )

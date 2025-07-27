@@ -39,6 +39,10 @@
 .faq{
     width: 50%; 
 }
+.up{
+    transform: rotate(180deg);
+    transition: transform 0.05s;
+}
 .question{
     padding: 5px 12px;
     color: aqua;
@@ -57,7 +61,7 @@
     /* display: none; */
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.15s linear;
+    transition: max-height 0.05s linear;
 }
 .open{
     max-height: 120px;

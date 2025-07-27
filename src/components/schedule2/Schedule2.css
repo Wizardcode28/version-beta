@@ -1,0 +1,155 @@
+.schedulecontainer{
+    background-color: #020f1f;
+    width: 100%;
+    height: auto;
+    position: relative;
+    color: aqua;
+}
+
+.scheduletitle{
+    /* width: 100vw;
+    margin: auto; */
+    text-align: center;
+    color: aquamarine;
+    text-shadow: rgb(230, 230, 230) 0px 0px 5px;
+    font-size:30px;
+    font-weight: bold;
+    font-family: "StateWide",sans-serif;
+    margin-bottom: 110px;
+    padding-top: 50px;
+    /* margin-top: 7vh; */
+    
+}
+
+.allcontainer{
+    display: flex;
+    /* gap: 20px; */
+    justify-content: center;
+    gap: 100px;
+    /* height: 90%; */
+}
+
+.sleft{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 250px;
+}
+
+.timetitle{
+    font-size: 30px;
+    color: rgba(246, 138, 138, 1);
+    font-family: League Spartan,"sans-serif";
+}
+.detailcont .card{
+    width: 100%;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    font-family: League Spartan,"sans-serif";
+    text-align: start;
+}
+
+.detailcont{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.detailheading{
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+    justify-content: start;
+    font-weight: bold;
+}
+.timetitle{
+    background: linear-gradient(90deg, #FF4F79, #00FFF1,#FF4F79);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.small{
+    width: 70px;
+}
+
+.mid{
+    width: 13%;
+    height: 100%;
+    /* margin-right: 50px; */
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+
+    position: relative;
+}
+.mid .spherecont{
+    width: 100%;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: start;
+}
+.mid .spherecont .sphere{
+    width: 100%;
+}
+
+.rectangle{
+    width: 25px;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 1;
+}
+
+.sright{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 250px;
+    justify-content: center;
+}
+*{
+    /* outline: 1px solid lime; */
+}
+@media (max-width: 900px) {
+  .allcontainer {
+    flex-direction: column;
+    gap: 100px;
+  }
+  .mid{
+    width: 18%;
+    top: 10%;
+    height: 95%;
+    /* height: 900px; */
+    position: absolute;
+  }
+  .mid .spherecont{
+    height: 100%;
+    justify-content: space-between;
+    gap: 17%;
+  }
+  .sleft, .sright{
+    width: 80%;
+    gap: 100px;
+    margin: 0;
+    margin-left: 20px;
+  }
+  .sleft,.sright{
+    position: relative;
+    left: 80px;
+  }
+
+}
+@media screen and (max-width:515px){
+    .sleft,.sright{
+        margin-left: 0px;
+    }
+    .small{
+        width: 50px;
+    }
+    .card{
+        height: 180px;
+    }
+}

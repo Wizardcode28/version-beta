@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 const Faqs = () => {
   useEffect(() => {
       AOS.init({
-        duration:1000,
+        duration:6000,
         once:true
       })
     },[])
@@ -21,9 +21,9 @@ const Faqs = () => {
       <div className='faqstitle'>Faqs</div>
       <div className="faqs">
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(0)}} data-aos="fade-right"  data-aos-delay="0">
+            <div className="question" onClick={()=>{handleClick(0)}} data-aos="fade-right"  data-aos-delay="0" data-aos-offset="600">
               Who are we?
-              <img src={down} alt=""/>
+              <img src={down} className={`${currIndex === 0 ? 'up' : ''}`} alt=""/>
             </div>
             <div className={`answer-wrapper ${currIndex === 0 ? 'open' : ''}`}>
               <div className="answer">
@@ -37,9 +37,9 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(1)}} data-aos="fade-left"  data-aos-delay="150">
+            <div className="question" onClick={()=>{handleClick(1)}} data-aos="fade-left"  data-aos-delay="150" data-aos-offset="600">
               What are we looking in a team?
-              <img src={down}alt="" />
+              <img src={down} className={`${currIndex === 1 ? 'up' : ''}`}  alt="" />
             </div>
             <div className={`answer-wrapper ${currIndex === 1 ? 'open' : ''}`}>
               <div className="answer">
@@ -52,9 +52,9 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(2)}} data-aos="fade-right"  data-aos-delay="300">
+            <div className="question" onClick={()=>{handleClick(2)}} data-aos="fade-right"  data-aos-delay="300" data-aos-offset="600">
               What is version beta?
-              <img src={down}alt="" />
+              <img src={down} className={`${currIndex === 2 ? 'up' : ''}`} alt="" />
             </div>
             <div className={`answer-wrapper ${currIndex === 2 ? 'open' : ''}`}>
               <div className="answer">
@@ -67,9 +67,9 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(3)}} data-aos="fade-left" data-aos-delay="450">
+            <div className="question" onClick={()=>{handleClick(3)}} data-aos="fade-left" data-aos-delay="450" data-aos-offset="600">
               Will Hackathon be conducted online?
-              <img src={down} alt="" />
+              <img src={down} className={`${currIndex === 3 ? 'up' : ''}`}  alt="" />
             </div>
             <div className={`answer-wrapper ${currIndex === 3 ? 'open' : ''}`}>
               <div className="answer">
@@ -80,9 +80,9 @@ const Faqs = () => {
 
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(4)}} data-aos="fade-right" data-aos-delay="600">
+            <div className="question" onClick={()=>{handleClick(4)}} data-aos="fade-right" data-aos-delay="600" data-aos-offset="600">
               Who should participate?
-              <img src={down}alt="" />
+              <img src={down} className={`${currIndex === 4 ? 'up' : ''}`} alt="" />
             </div>
             <div className={`answer-wrapper ${currIndex === 4 ? 'open' : ''}`}>
               <div className="answer">
@@ -95,9 +95,9 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(5)}} data-aos="fade-left" data-aos-delay="750">
+            <div className="question" onClick={()=>{handleClick(5)}} data-aos="fade-left" data-aos-delay="750" data-aos-offset="600">
               What is the goal of Hackathon?
-              <img src={down}alt="" />
+              <img src={down} className={`${currIndex === 5 ? 'up' : ''}`} alt="" />
             </div>
             <div className={`answer-wrapper ${currIndex === 5 ? 'open' : ''}`}>
               <div className="answer">
@@ -108,9 +108,9 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(6)}} data-aos="fade-right" data-aos-delay="900">
+            <div className="question" onClick={()=>{handleClick(6)}} data-aos="fade-right" data-aos-delay="900" data-aos-offset="600">
               Number of members in a team?
-              <img src={down} alt="" />
+              <img src={down} className={`${currIndex === 6 ? 'up' : ''}`} alt="" />
             </div>
             <div className={`answer-wrapper ${currIndex === 6 ? 'open' : ''}`}>
               <div className="answer">
@@ -122,9 +122,9 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(7)}} data-aos="fade-left" data-aos-delay="1050">
+            <div className="question" onClick={()=>{handleClick(7)}} data-aos="fade-left" data-aos-delay="1050" data-aos-offset="600">
               How would I know if I got selected?
-              <img src={down} alt="" />
+              <img src={down} className={`${currIndex === 7 ? 'up' : ''}`} alt="" />
             </div>
             <div className={`answer-wrapper ${currIndex === 7 ? 'open' : ''}`}>
               <div className="answer">
@@ -134,9 +134,9 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(8)}} data-aos="fade-right" data-aos-delay="1200">
+            <div className="question" onClick={()=>{handleClick(8)}} data-aos="fade-right" data-aos-delay="1200" data-aos-offset="600">
               How to participate?
-              <img src={down} alt="" />
+              <img src={down} className={`${currIndex === 8 ? 'up' : ''}`} alt="" />
             </div>
             <div className={`answer-wrapper ${currIndex === 8 ? 'open' : ''}`}>
               <div className="answer">
@@ -147,9 +147,9 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(9)}} data-aos="fade-left" data-aos-delay="1350">
+            <div className="question" onClick={()=>{handleClick(9)}} data-aos="fade-left" data-aos-delay="1350" data-aos-offset="600">
               Cost for participation in Hackathon?
-              <img src={down} alt="" />
+              <img src={down} className={`${currIndex === 9 ? 'up' : ''}`} alt="" />
             </div>
             <div className={`answer-wrapper ${currIndex === 9 ? 'open' : ''}`}>
               <div className="answer">
@@ -160,9 +160,9 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(10)}} data-aos="fade-right" data-aos-delay="1500">
+            <div className="question" onClick={()=>{handleClick(10)}} data-aos="fade-right" data-aos-delay="1500" data-aos-offset="600">
               What is selection procedure?
-              <img src={down} alt="" />
+              <img src={down} className={`${currIndex === 10 ? 'up' : ''}`} alt="" />
             </div>
             <div className={`answer-wrapper ${currIndex === 10 ? 'open' : ''}`}>
               <div className="answer">
