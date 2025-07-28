@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import './Sponsors2.css';
 
 const Sponsors = () => {
-  // Slide directions for logos
+ 
   const directions = ['left', 'right'];
 
   return (
