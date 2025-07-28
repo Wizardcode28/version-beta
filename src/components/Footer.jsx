@@ -25,16 +25,25 @@ export default function Footer() {
       sx={{
         backgroundColor: '#0f172a',
         color: 'white',
-        py: 6,
+        py: 2,
         px: 3
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={6} alignItems="flex-start" justifyContent="space-around">
+        <Grid
+          container
+          spacing={{ xs: 3, md: 6 }}
+          alignItems="flex-start"
+          justifyContent="space-between"
+          sx={{
+            px: { xs: 2, sm: 4, md: 10 },
+            mt: { xs: 2, md: 6 }
+          }}
+        >
           
           {/* Logo and Description */}
-          <Grid item xs={12} lg={4}>
-            <Box sx={{ textAlign: { xs: 'center', lg: 'left' }, marginTop: 10 }}>
+          <Grid item xs={12} lg={4} sx={{width: '100%'}}>
+            <Box sx={{ textAlign: { xs: 'center', lg: 'left' }, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
               <Stack 
                 direction="row" 
                 alignItems="center" 
@@ -46,13 +55,13 @@ export default function Footer() {
               >
                 <Avatar
                   sx={{
-                    width: 140,
-                    height: 55,
+                    width: { xs: 100, sm: 140 },
+                    height: { xs: 50, sm: 60 },
                     borderRadius: 0,
                     bgcolor: 'transparent'
                   }}
                   alt="ISTE Logo"
-                  src="/Images/logo.png"
+                  src="/Images/Logo.svg"
                   variant="square"
                 >
                   
@@ -75,8 +84,17 @@ export default function Footer() {
           </Grid>
 
           {/* Contact Us + Divider + Social Links Entity */}
-          <Grid item xs={12} lg={8}>
-            <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 4 }}>
+          <Grid item xs={12} lg={8} sx={{width: '100%'}} >
+            <Box 
+              sx={{ 
+                display: 'flex', 
+                flexDirection: { xs: 'column', md: 'row' }, 
+                justifyContent: { xs: 'center', md: 'center' }, 
+                alignItems: { xs: 'center', md: 'flex-start' },
+                gap: { xs: 4, md: 15 }
+              }}
+            >
+
 
               {/* Contact Us */}
               <Box sx={{ textAlign: 'left' }}>
@@ -84,10 +102,10 @@ export default function Footer() {
                   variant="h6"
                   sx={{
                     mb: 3,
-                    textAlign: 'left',
+                    textAlign: { xs: 'center', md: 'left' },
+                    fontSize: { xs: 28, md: 42 },
                     color: '#ea580c',
                     fontWeight: 600,
-                    fontSize: 40,
                     transition: 'transform 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.1)'
@@ -98,17 +116,17 @@ export default function Footer() {
                 </Typography>
 
 
-                <Stack spacing={2}>
+                <Stack spacing={{ xs: 2, md: 4 }}>
                   <Stack
                     direction="row"
                     alignItems="center"
-                    spacing={1.5}
+                    spacing={{ xs: 2, md: 3 }}
                     sx={{ justifyContent: 'flex-start' }}
                   >
                     <Phone sx={{ color: '#ea580c', fontSize: 35 }} />
                     <Box>
                       <Typography variant="body2" sx={{
-                        fontSize: 17,
+                        fontSize: { xs: 13, sm: 16, md: 18 },
                         color: '#b5b5b6',
                         transition: 'color 0.3s ease',
                         '&:hover': {
@@ -118,7 +136,7 @@ export default function Footer() {
                         Abhinav Rai &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +91 7909474088
                       </Typography>
                       <Typography variant="body2" sx={{
-                        fontSize: 17,
+                        fontSize: { xs: 13, sm: 16, md: 18 },
                         color: '#b5b5b6',
                         transition: 'color 0.3s ease',
                         '&:hover': {
@@ -133,13 +151,13 @@ export default function Footer() {
                   <Stack
                     direction="row"
                     alignItems="flex-start"
-                    spacing={1.5}
+                    spacing={{ xs: 2, md: 3 }}
                     sx={{ justifyContent: 'flex-start' }}
                   >
                     <LocationOn sx={{ color: '#ea580c', fontSize: 35, mt: 0.5 }} />
                     <Link href="https://maps.app.goo.gl/ZERHwrJJcutMMMig8" sx={{cursor:'pointer', textDecoration:'none'}}  >
                       <Typography variant="body2" sx={{
-                        fontSize: 17,
+                        fontSize: { xs: 13, sm: 16, md: 17 },
                         color: '#b5b5b6',
                         transition: 'color 0.3s ease',
                         '&:hover': {
@@ -156,13 +174,13 @@ export default function Footer() {
                   <Stack
                     direction="row"
                     alignItems="center"
-                    spacing={1.5}
+                    spacing={{ xs: 2, md: 3 }}
                     sx={{ justifyContent: 'flex-start' }}
                   >
                     <Email sx={{ color: '#ea580c', fontSize: 35 }} />
                     <Typography variant="body2" sx={{
                       cursor: 'pointer',
-                        fontSize: 17,
+                        fontSize: { xs: 13, sm: 16, md: 17 },
                         color: '#b5b5b6',
                         transition: 'color 0.3s ease',
                         '&:hover': {
@@ -179,8 +197,8 @@ export default function Footer() {
               <Box
                 sx={{
                   width: '1px',
-                  height: '225px',
-                  marginTop: '20px',
+                  height: '240px',
+                  marginTop: '55px',
                   backgroundColor: '#7a7a7a',
                   display: { xs: 'none', lg: 'flex', md: 'flex' }
                 }}
@@ -192,10 +210,10 @@ export default function Footer() {
                   variant="h6"
                   sx={{
                     mb: 3,
-                    textAlign: 'center',
                     color: '#ea580c',
                     fontWeight: 600,
-                    fontSize: 40,
+                    textAlign: { xs: 'center', md: 'left' },
+                    fontSize: { xs: 28, md: 42 },
                     transition: 'transform 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.1)'
@@ -206,7 +224,7 @@ export default function Footer() {
                 </Typography>
 
 
-                <Stack spacing={2}>
+                <Stack spacing={{ xs: 2, md: 5 }}>
                   <Link
                     href="https://www.instagram.com/istemanit/"
                     underline="none"
@@ -214,7 +232,7 @@ export default function Footer() {
                     sx={{
                       display: 'flex',
                       alignItems: 'center',
-                      gap: 1.5,
+                      gap: 3,
                       justifyContent: 'flex-start',
                       '&:hover .icon-wrapper': {
                         transform: 'scale(1.1)',
@@ -231,8 +249,8 @@ export default function Footer() {
                     <Box
                       className="icon-wrapper"
                       sx={{
-                        width: 30,
-                        height: 30,
+                        width: 35,
+                        height: 35,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -240,7 +258,7 @@ export default function Footer() {
                       }}
                     >
                       {/* Default Icon */}
-                      <Instagram className="icon-default" sx={{ color: '#ea580c', fontSize: 35 }} />
+                      <Instagram className="icon-default" sx={{ color: '#ea580c', fontSize: 40 }} />
 
                       {/* Hover Image Icon */}
                       <Box
@@ -249,8 +267,8 @@ export default function Footer() {
                         src="/Images/instagram.png"
                         alt="Instagram Logo"
                         sx={{
-                          width: 30,
-                          height: 30,
+                          width: 35,
+                          height: 35,
                           display: 'none',
                           objectFit: 'contain',
                         }}
@@ -271,7 +289,7 @@ export default function Footer() {
                     sx={{
                       display: 'flex',
                       alignItems: 'center',
-                      gap: 1.5,
+                      gap: 3,
                       justifyContent: 'flex-start',
                       '&:hover .icon-wrapper': {
                         transform: 'scale(1.1)',
@@ -291,8 +309,8 @@ export default function Footer() {
                     <Box
                       className="icon-wrapper"
                       sx={{
-                        width: 30,
-                        height: 30,
+                        width: 33,
+                        height: 33,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -300,7 +318,7 @@ export default function Footer() {
                       }}
                     >
                       {/* Default Icon */}
-                      <Facebook className="icon-default" sx={{ color: '#ea580c', fontSize: 35 }} />
+                      <Facebook className="icon-default" sx={{ color: '#ea580c', fontSize: 40 }} />
 
                       {/* Hover Image Icon */}
                       <Box
@@ -309,8 +327,8 @@ export default function Footer() {
                         src="/Images/facebook.svg"
                         alt="Instagram Logo"
                         sx={{
-                          width: 30,
-                          height: 30,
+                          width: 33,
+                          height: 33,
                           display: 'none',
                           objectFit: 'contain',
                         }}
@@ -323,13 +341,13 @@ export default function Footer() {
                   </Link>
 
                   <Link
-                    href="https://www.instagram.com/istemanit/"
+                    href="https://www.linkedin.com/company/iste-sc-manit/"
                     underline="none"
                     color="inherit"
                     sx={{
                       display: 'flex',
                       alignItems: 'center',
-                      gap: 1.5,
+                      gap: {md: 2, xs: 1.5},
                       justifyContent: 'flex-start',
                       '&:hover .icon-wrapper': {
                         transform: 'scale(1.1)',
@@ -349,8 +367,8 @@ export default function Footer() {
                     <Box
                       className="icon-wrapper"
                       sx={{
-                        width: 30,
-                        height: 30,
+                        width: 45,
+                        height: 45,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -358,7 +376,7 @@ export default function Footer() {
                       }}
                     >
                       {/* Default Icon */}
-                      <LinkedInIcon className="icon-default" sx={{ color: '#ea580c', fontSize: 35 }} />
+                      <LinkedInIcon className="icon-default" sx={{ color: '#ea580c', fontSize: 45, marginLeft: {md: '-8.5px', xs: '-10px'} }} />
 
                       {/* Hover Image Icon */}
                       <Box
@@ -367,10 +385,11 @@ export default function Footer() {
                         src="/Images/linkedin.svg"
                         alt="Instagram Logo"
                         sx={{
-                          width: 40,
-                          height: 40,
+                          width: 45,
+                          height: 45,
                           display: 'none',
                           objectFit: 'contain',
+                          marginLeft: {md: '-12px', xs: '-13.5px'}
                         }}
                       />
                     </Box>
@@ -401,9 +420,9 @@ export default function Footer() {
         }}
       />
 
-      <Container sx={{display: 'flex', justifyContent: 'space-evenly', marginTop: '1.5rem', gap: '1.5rem' }} >
-        <Link sx={{textDecoration: 'none', cursor: 'pointer', color: '#b5b5b6', fontSize: '20px', fontFamily: 'Roboto', fontWeight: '600' }} > Code Of Conduct Devfolio </Link>
-        <Link sx={{textDecoration: 'none', cursor: 'pointer', color: '#b5b5b6', fontSize: '20px', fontFamily: 'Roboto', fontWeight: '600' }} > Rulebook </Link>
+      <Container sx={{ display: 'flex',flexDirection: 'row',flexWrap: 'wrap',justifyContent: 'center',alignItems: 'center',gap: {xs:'2rem', md: '20rem'} ,marginTop: '1.5rem',textAlign: 'center'}}>
+        <Link sx={{textDecoration: 'none',cursor: 'pointer', color: '#b5b5b6', fontSize: { xs: '16px', sm: '18px', md: '20px' }, fontFamily: 'Roboto', fontWeight: '600', whiteSpace: 'nowrap'}}> Code Of Conduct Devfolio </Link>
+        <Link sx={{textDecoration: 'none',cursor: 'pointer', color: '#b5b5b6', fontSize: { xs: '16px', sm: '18px', md: '20px' }, fontFamily: 'Roboto', fontWeight: '600', whiteSpace: 'nowrap'}}> Rulebook </Link>
       </Container>
       
       <Box

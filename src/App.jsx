@@ -1,4 +1,4 @@
-import { useEffect, useState,useRef } from 'react'
+import { useEffect, useState ,useRef } from 'react'
 import './App.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -74,10 +74,6 @@ const containerRef = useRef(null)
       <Gallery3/>
       <Sponsors/>
       <Faqs/>
-<<<<<<< HEAD
-      {/* <Contact/> */}
-=======
->>>>>>> a600cd183a643a6498e268fddd565c4727eb5fb0
       <Footer/>
     </div>
   )

@@ -14,10 +14,6 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.2.0",
     "@mui/material": "^7.2.0",
-<<<<<<< HEAD
-    "@mui/styled-engine": "^7.2.0",
-=======
->>>>>>> a600cd183a643a6498e268fddd565c4727eb5fb0
     "aos": "^2.3.4",
     "framer-motion": "^12.19.1",
     "gsap": "^3.13.0",
