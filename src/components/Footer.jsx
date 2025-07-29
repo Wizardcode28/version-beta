@@ -41,7 +41,6 @@ export default function Footer() {
           }}
         >
           
-          {/* Logo and Description */}
           <Grid item xs={12} lg={4} sx={{width: '100%'}}>
             <Box sx={{ textAlign: { xs: 'center', lg: 'left' }, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
               <Stack 
@@ -83,7 +82,6 @@ export default function Footer() {
             </Box>
           </Grid>
 
-          {/* Contact Us + Divider + Social Links Entity */}
           <Grid item xs={12} lg={8} sx={{width: '100%'}} >
             <Box 
               sx={{ 
@@ -96,7 +94,6 @@ export default function Footer() {
             >
 
 
-              {/* Contact Us */}
               <Box sx={{ textAlign: 'left' }}>
                 <Typography
                   variant="h6"
@@ -193,7 +190,6 @@ export default function Footer() {
                 </Stack>
               </Box>
 
-              {/* Vertical Divider */}
               <Box
                 sx={{
                   width: '1px',
@@ -204,7 +200,6 @@ export default function Footer() {
                 }}
               />
 
-              {/* Social Links */}
               <Box sx={{ textAlign: 'left' }}>
                 <Typography
                   variant="h6"
@@ -245,7 +240,7 @@ export default function Footer() {
                       },
                     }}
                   >
-                    {/* Icon Wrapper with smooth scaling */}
+
                     <Box
                       className="icon-wrapper"
                       sx={{
@@ -257,10 +252,8 @@ export default function Footer() {
                         transition: 'transform 0.3s ease',
                       }}
                     >
-                      {/* Default Icon */}
                       <Instagram className="icon-default" sx={{ color: '#ea580c', fontSize: 40 }} />
 
-                      {/* Hover Image Icon */}
                       <Box
                         component="img"
                         className="icon-hover"
@@ -305,7 +298,6 @@ export default function Footer() {
                       }
                     }}
                   >
-                    {/* Icon Wrapper with smooth scaling */}
                     <Box
                       className="icon-wrapper"
                       sx={{
@@ -317,10 +309,8 @@ export default function Footer() {
                         transition: 'transform 0.3s ease',
                       }}
                     >
-                      {/* Default Icon */}
                       <Facebook className="icon-default" sx={{ color: '#ea580c', fontSize: 40 }} />
 
-                      {/* Hover Image Icon */}
                       <Box
                         component="img"
                         className="icon-hover"
@@ -363,7 +353,6 @@ export default function Footer() {
                       }
                     }}
                   >
-                    {/* Icon Wrapper with smooth scaling */}
                     <Box
                       className="icon-wrapper"
                       sx={{
@@ -375,10 +364,8 @@ export default function Footer() {
                         transition: 'transform 0.3s ease',
                       }}
                     >
-                      {/* Default Icon */}
                       <LinkedInIcon className="icon-default" sx={{ color: '#ea580c', fontSize: 45, marginLeft: {md: '-8.5px', xs: '-10px'} }} />
 
-                      {/* Hover Image Icon */}
                       <Box
                         component="img"
                         className="icon-hover"
@@ -404,9 +391,6 @@ export default function Footer() {
           </Grid>
         </Grid>
       </Container>
-      {/* COPYRIGHT */}
-
-      {/* HORIZONTAL DIVIDER */}
 
       <Box
         sx={{
